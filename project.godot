@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Border Collie Hunt"
+config/name="Sheep_Dog"
 run/main_scene="res://MainGame/MainGame.tscn"
 config/icon="res://icon.png"
 

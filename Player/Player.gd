@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var movement_speed = 750
 var bulletSource = preload ("res://Bullet/Bullet.tscn")
-
+var bulletInstance = bulletSource.instance()
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -26,4 +26,4 @@ func _process(delta):
 	if Input. is_action_just_pressed("fire"):
 			var BulletInstance = bulletSource.instance()
 			bulletInstance.position = Vector2(position.x, position.y-20)
-			get_tree().get_root().add_child(bulletInstance)
+
