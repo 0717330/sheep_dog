@@ -14,15 +14,13 @@ func _ready():
 #up command
 func _physics_process(delta):
 	if Input. is_action_pressed("ui_up"):
-		if position.y > 10:
-			move_and_collide(Vector2(0, -movement_speed * delta))
+		move_and_collide(Vector2(0, -movement_speed * delta))
 #down command
 	if Input. is_action_pressed("ui_down"):
-		if position.y < 640:
-			move_and_collide(Vector2(0, movement_speed * delta))
+		move_and_collide(Vector2(0, movement_speed * delta))
 		
 func _process(delta):
-	if Input. is_action_just_pressed("fire"):
+	if Input. is_action_pressed("fire"):
 		var bulletInstance = bulletSource.instance()
 		bulletInstance.position = Vector2(position.x, position.y-20)
 		get_tree().get_root().add_child(bulletInstance)
